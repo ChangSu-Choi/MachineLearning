@@ -1,0 +1,28 @@
+tf.Tensor(7.0, shape=(), dtype=float32)
+tf 1.0 : name속성 -> id
+shape 속성: 텐서 데이터의 형태를 나타냄, ()빈 괄호는 상수 텐서라는 의미
+dtype속성은 텐서의 데이터타입을 나타냄
+numpy() 메소드를 사용하면 텐서 정보의 numpy 속성에 있던 값을 출력해 볼 수 있음 -> 텐서 데이터 타입의 값을 numpy데이터 타입의 값으로 바꾸어 출력하는 것 ex) node.numpy() --> 100
+numpy 속성을 사용하면 데이터 타입에 변화가 생김
+
+>>> tensor_a = tf.constant(2)
+>>> tensor_b = tf.constant(3)
+>>> tensor_a
+<tf.Tensor: shape=(), dtype=int32, numpy=2>
+>>> tensor_c = tf.constant(5)
+>>> tensor_a.numpy()
+2
+>>> tensor_b.numpy()
+3
+>>> tensor_c.numpy()
+5
+>>> tensor_d = tf.add(tensor_a, tensor_b)            연산자 사용 가능 tensor_a + tensor_b
+>>> tensor_d
+<tf.Tensor: shape=(), dtype=int32, numpy=5>
+
+>>> tensor_e = tf.multiply(tensor_d, tensor_c)      연산자 사용 가능 tensor_d * tensor_c
+>>> tensor_e
+<tf.Tensor: shape=(), dtype=int32, numpy=25>
+
+
+텐서플로우에서 행렬은 넘파이 배열을 사용해서 나타냄
